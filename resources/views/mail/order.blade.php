@@ -40,8 +40,8 @@
     <div class="header">
         <h1>Отчет по заказу</h1>
         
-        <!-- Оставляем $type, как было в вашем примере -->
-        <p>{{ $type }}</p>
+        <!-- Оставляем $data->type, как было в вашем примере -->
+        <p>{{ $data->type }}</p>
     </div>
     <div class="content">
         <table>
@@ -51,50 +51,50 @@
             </tr>
             <tr>
                 <td>Марка</td>
-                <td>{{ $mark }}</td>
+                <td>{{ $data->mark }}</td>
             </tr>
             <tr>
                 <td>Модель машины</td>
-                <td>{{ $model }}</td>
+                <td>{{ $data->model }}</td>
             </tr>
             <tr>
                 <td>Год выпуска модели</td>
-                <td>{{ $year }}</td>
+                <td>{{ $data->year }}</td>
             </tr>
             <tr>
                 <td>Комплектация</td>
-                <td>{{ $complect }}</td>
+                <td>{{ $data->complect }}</td>
             </tr>
             <tr>
                 <td>Категория тарифа</td>
-                <td>{{ $categ->title }}</td>
+                <td>{{ $data->categ->title }}</td>
             </tr>
             <tr>
                 <td>Пленка</td>
-                <td>{{ $brand->title }}</td>
+                <td>{{ $data->brand->title }}</td>
             </tr>
             <!-- Дополнительные услуги -->
             <tr>
                 <td colspan="2"><h3>Дополнительные услуги:</h3></td>
             </tr>
-            @foreach($additional_services as $service)
+            @foreach($data->additional_services as $data->service)
                 <tr>
-                    <td>{{ $loop->iteration }}</td>
-                    <td>{{ $service->title }}</td>
+                    <td>{{ $data->loop->iteration }}</td>
+                    <td>{{ $data->service->title }}</td>
                 </tr>
             @endforeach
             <!-- Новые добавленные данные -->
             <tr>
                 <td>Имя заказчика</td>
-                <td>{{ $name }}</td>
+                <td>{{ $data->name }}</td>
             </tr>
             <tr>
                 <td>Номер телефона</td>
-                <td>{{ $phone }}</td>
+                <td>{{ $data->phone }}</td>
             </tr>
             <tr>
                 <td>Хочу, чтобы со мной связались</td>
-                <td>@if ($want == "on") Да @else Нет @endif</td>
+                <td>@if ($data->want == "on") Да @else Нет @endif</td>
             </tr>
         </table>
     </div>
@@ -142,7 +142,7 @@
 <body>
     <div class="header">
         <h1>Отчет по заказу</h1>
-        <p>{{ $type }}</p>
+        <p>{{ $data->type }}</p>
     </div>
     <div class="content">
     <table>
@@ -152,55 +152,55 @@
         </tr>
         <tr>
             <td>Марка</td>
-            <td>{{ $mark }}</td>
+            <td>{{ $data->mark }}</td>
         </tr>
         <tr>
             <td>Модель машины</td>
-            <td>{{ $model }}</td>
+            <td>{{ $data->model }}</td>
         </tr>
         <tr>
             <td>Год выпуска модели</td>
-            <td>{{ $year }}</td>
+            <td>{{ $data->year }}</td>
         </tr>
         <tr>
             <td>Комплектация</td>
-            <td>{{ $complect }}</td>
+            <td>{{ $data->complect }}</td>
         </tr>
         <tr>
             <td>Выбранные элементы</td>
             <td>
                 <ul>
-                    @foreach($elements as $element)
-                        <li>{{ $element->title }}</li>
+                    @foreach($data->elements as $data->element)
+                        <li>{{ $data->element->title }}</li>
                     @endforeach
                 </ul>
             </td>
         </tr>
         <tr>
             <td>Пленка</td>
-            <td>{{ $brand->title }}</td>
+            <td>{{ $data->brand->title }}</td>
         </tr>
         <tr>
             <td>Дополнительные услуги</td>
             <td>
                 <ul>
-                    @foreach($additional_services as $service)
-                        <li>{{ $loop->iteration }} - {{ $service->title }} руб.</li>
+                    @foreach($data->additional_services as $data->service)
+                        <li>{{ $data->loop->iteration }} - {{ $data->service->title }} руб.</li>
                     @endforeach
                 </ul>
             </td>
         </tr>
         <tr>
             <td>Имя заказчика</td>
-            <td>{{ $name }}</td>
+            <td>{{ $data->name }}</td>
         </tr>
         <tr>
             <td>Номер телефона</td>
-            <td>{{ $phone }}</td>
+            <td>{{ $data->phone }}</td>
         </tr>
         <tr>
             <td>Хочу, чтобы со мной связались</td>
-            <td>@if ($want == "on") да @else нет @endif</td>
+            <td>@if ($data->want == "on") да @else нет @endif</td>
         </tr>
     </table>
     </div>
