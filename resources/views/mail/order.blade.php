@@ -1,4 +1,4 @@
-@if ($data->categ)
+@if (unset($data->categ))
 <!DOCTYPE html>
 <html>
 <head>
