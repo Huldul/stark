@@ -32,25 +32,25 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="{{ route('tasks', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Услуги</a>
+                            <a href="{{ route('tasks', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('services')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="header__nav-link">О Компании</a>
+                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('about_company')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('career', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Карьера</a>
+                            <a href="{{ route('career', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('career')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Контакты</a>
+                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('contacts')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('prices', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Цены</a>
+                            <a href="{{ route('prices', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('prices')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('team', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Команда</a>
+                            <a href="{{ route('team', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('team')</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="{{ route('stocks', ['locale' => app()->getLocale()]) }}" class="header__nav-link">Акции</a>
+                            <a href="{{ route('stocks', ['locale' => app()->getLocale()]) }}" class="header__nav-link">@trans('promotions')</a>
                         </li>
                     </ul>
                 </nav>
