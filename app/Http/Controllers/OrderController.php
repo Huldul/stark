@@ -116,7 +116,7 @@ class OrderController extends Controller
         
         $order = new Application;
         $order->name = $request->name;
-        $order->number = $request->phone;
+        $order->number = $request->number;
         $order->text = $request->text;
         $order->save();
         return redirect()->back();
