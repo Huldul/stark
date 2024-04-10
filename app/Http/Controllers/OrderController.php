@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use PDF; 
 use Illuminate\Support\Facades\Storage;
 use App\Models\Order;
+use App\Models\Application;
 
 class OrderController extends Controller
 {
@@ -112,6 +113,12 @@ class OrderController extends Controller
     }
     
     public function send_appl(Request $request){
-        dd($request);
+        
+        $order = new Order;
+        $order->name = $request->name;
+        $order->number = $request->phone;
+        $order->text = $request->text;
+        $order->save();
+        return redirect()->back();
     }
 }
