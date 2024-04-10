@@ -26,59 +26,58 @@
         <div class="footer__container">
             <div class="footer__top">
                 <div class="footer__col">
-                    <a href="#" class="footer__logo">
-                        <img src="img/logo.png" alt="STARK">
+                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="footer__logo">
+                        <img src="{{asset("img/logo.png")}}" alt="STARK">
                     </a>
-                    <span>Лицензия № ЛО-77-01-018040 от 14 мая 2019 г.
-                        ИНН 7702452811 ОГРН 1187746933186</span>
+                    <span>{{setting('.licence')}}</span>
                 </div>
                 <nav class="footer__nav">
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Услуги</a>
+                            <a href="{{ route('tasks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Услуги</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Цены</a>
+                            <a href="{{ route('prices', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Цены</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">О Компании</a>
+                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="footer__list-link">О Компании</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Команда</a>
+                            <a href="{{ route('team', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Команда</a>
                         </li>
                     </ul>
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Карьера</a>
+                            <a href="{{ route('career', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Карьера</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Акции</a>
+                            <a href="{{ route('stocks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Акции</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Контакты</a>
+                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Контакты</a>
                         </li>
                         <li class="footer__list-socials">
-                            <a href="#" class="footer__list-social">
-                                <img src="img/insta-icon.png" alt="">
+                            <a href="{{setting('.instagram')}}" class="footer__list-social">
+                                <img src="{{asset("img/insta-icon.png")}}" alt="">
                             </a>
-                            <a href="#" class="footer__list-social">
-                                <img src="img/tg-icon.png" alt="">
+                            <a href="{{setting('.tg')}}" class="footer__list-social">
+                                <img src="{{asset("img/tg-icon.png")}}" alt="">
                             </a>
-                            <a href="#" class="footer__list-social">
-                                <img src="img/wp-icon.png" alt="">
+                            <a href="{{setting('.wa')}}" class="footer__list-social">
+                                <img src="{{asset("img/wp-icon.png")}}" alt="">
                             </a>
                         </li>
                     </ul>
                 </nav>
                 <ul class="footer__info">
                     <li class="footer__info-item">
-                        <a href="tel:+7 (766) 654 44 17" class="footer__info-link">+7 (766) 654 44 17</a>
+                        <a href="tel:{{setting('.number')}}" class="footer__info-link">{{setting('.number')}}</a>
                     </li>
                     <li class="footer__info-item">
-                        <a href="tel:+7 (756) 622 16 20" class="footer__info-link">+7 (756) 622 16 20</a>
+                        <a href="tel:{{setting('.number2')}}" class="footer__info-link">{{setting('.number2')}}</a>
                     </li>
                     <li class="footer__info-item">
-                        <a href="mailto:stark000@gmail.com" class="footer__info-link">stark000@gmail.com</a>
+                        <a href="mailto:{{setting('.email')}}" class="footer__info-link">{{setting('.email')}}</a>
                     </li>
                     <li class="footer__info-item">
                         <a href="javascript:;" class="footer__info-link red js-feedback">связаться с нами</a>

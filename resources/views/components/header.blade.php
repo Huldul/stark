@@ -60,14 +60,14 @@
                         <a href="tel:{{setting('.number2')}}">{{setting('.number2')}}</a>
                     </div>
                     <div class="header__socials">
-                        <a href="#" target="_blank">
+                        <a href="setting('.wa')" target="_blank">
                             <img src="{{asset("img/wp-icon.png")}}" alt="">
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="{{setting('.instagram')}}" target="_blank">
                             <img src="{{asset("img/insta-icon.png")}}" alt="">
                         </a>
                     </div>
-                    <a href="mailto:stark000@gmail.com" class="header__mail" target="_blank">stark000@gmail.com</a>
+                    <a href="mailto:{{setting('.email')}}" class="header__mail" target="_blank">{{setting('.email')}}</a>
                 </div>
             </div>
             <div class="burger" id="menu-icon">
