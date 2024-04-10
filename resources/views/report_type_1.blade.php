@@ -19,6 +19,20 @@
         .content {
             margin: 20px;
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -29,26 +43,59 @@
         <p>{{ $type }}</p>
     </div>
     <div class="content">
-        <!-- Ваши существующие данные -->
-        <h2>Пленка - {{ $brand->title }}</h2>
-        <h2>Категория тарифа: {{ $categ->title }}</h2>
-        <h3>Информация о заказе:</h3>
-        <p>Год выпуска модели: {{ $year }}</p>
-        <p>Модель машины: {{ $model }}</p>
-        <p>Марка: {{ $mark }}</p>
-        <p>Комплектация: {{ $complect }}</p>
-        
-        <h3>Дополнительные услуги:</h3>
-        <ul>
+        <table>
+            <tr>
+                <th>Параметр</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>Пленка</td>
+                <td>{{ $brand->title }}</td>
+            </tr>
+            <tr>
+                <td>Категория тарифа</td>
+                <td>{{ $categ->title }}</td>
+            </tr>
+            <tr>
+                <td>Год выпуска модели</td>
+                <td>{{ $year }}</td>
+            </tr>
+            <tr>
+                <td>Модель машины</td>
+                <td>{{ $model }}</td>
+            </tr>
+            <tr>
+                <td>Марка</td>
+                <td>{{ $mark }}</td>
+            </tr>
+            <tr>
+                <td>Комплектация</td>
+                <td>{{ $complect }}</td>
+            </tr>
+            <!-- Дополнительные услуги -->
+            <tr>
+                <td colspan="2"><h3>Дополнительные услуги:</h3></td>
+            </tr>
             @foreach($additional_services as $service)
-                <li>{{ $loop->iteration }} - {{ $service->title }}.</li>
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $service->title }}</td>
+                </tr>
             @endforeach
-        </ul>
-
-        <!-- Новые добавленные данные -->
-        <p>Имя заказчика: {{ $name }}</p>
-        <p>Номер телефона: {{ $phone }}</p>
-        <h3>хочу, чтобы со мной связались (@if ($want == "on")lf @else нет @endif)</h3>
+            <!-- Новые добавленные данные -->
+            <tr>
+                <td>Имя заказчика</td>
+                <td>{{ $name }}</td>
+            </tr>
+            <tr>
+                <td>Номер телефона</td>
+                <td>{{ $phone }}</td>
+            </tr>
+            <tr>
+                <td>Хочу, чтобы со мной связались</td>
+                <td>@if ($want == "on") Да @else Нет @endif</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

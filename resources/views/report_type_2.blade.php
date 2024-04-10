@@ -19,6 +19,20 @@
         .content {
             margin: 20px;
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 <body>
@@ -27,30 +41,64 @@
         <p>{{ $type }}</p>
     </div>
     <div class="content">
-        <h2>Пленка - {{ $brand->title }}</h2>
-        <h2>Выбранные элементы:</h2>
-        <ul>
-            @foreach($elements as $element)
-                <li>{{ $element->title }}</li>
-            @endforeach
-        </ul>
-        <h3>Информация о заказе:</h3>
-        <p>Год выпуска модели: {{ $year }}</p>
-        <p>Модель машины: {{ $model }}</p>
-        <p>Марка: {{ $mark }}</p>
-        <p>Комплектация: {{ $complect }}</p>
-        
-        <h3>Дополнительные услуги:</h3>
-        <ul>
-            
-            @foreach($additional_services as $service)
-                <li>{{ $loop->iteration }} - {{ $service->title }} руб.</li>
-            @endforeach
-        </ul>
-
-        <p>Имя заказчика: {{ $name }}</p>
-        <p>Номер телефона: {{ $phone }}</p>
-        <h3>хочу, чтобы со мной связались (@if ($want == "on") да @else нет @endif)</h3>
+    <table>
+        <tr>
+            <th>Параметр</th>
+            <th>Значение</th>
+        </tr>
+        <tr>
+            <td>Пленка</td>
+            <td>{{ $brand->title }}</td>
+        </tr>
+        <tr>
+            <td>Выбранные элементы</td>
+            <td>
+                <ul>
+                    @foreach($elements as $element)
+                        <li>{{ $element->title }}</li>
+                    @endforeach
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Год выпуска модели</td>
+            <td>{{ $year }}</td>
+        </tr>
+        <tr>
+            <td>Модель машины</td>
+            <td>{{ $model }}</td>
+        </tr>
+        <tr>
+            <td>Марка</td>
+            <td>{{ $mark }}</td>
+        </tr>
+        <tr>
+            <td>Комплектация</td>
+            <td>{{ $complect }}</td>
+        </tr>
+        <tr>
+            <td>Дополнительные услуги</td>
+            <td>
+                <ul>
+                    @foreach($additional_services as $service)
+                        <li>{{ $loop->iteration }} - {{ $service->title }} руб.</li>
+                    @endforeach
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Имя заказчика</td>
+            <td>{{ $name }}</td>
+        </tr>
+        <tr>
+            <td>Номер телефона</td>
+            <td>{{ $phone }}</td>
+        </tr>
+        <tr>
+            <td>Хочу, чтобы со мной связались</td>
+            <td>@if ($want == "on") да @else нет @endif</td>
+        </tr>
+    </table>
     </div>
 </body>
 </html>
