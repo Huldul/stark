@@ -53,7 +53,7 @@
             </svg>                
         </a>
         
-        <form action="{{route('sendRespond')}}" method="POST">
+        <form action="{{route('sendRespond')}}" method="POST"> @csrf
             <div class="modal__block-form">
                 <input type="text" name="name" class="modal__block-field" placeholder="ваше имя*">
                 <input type="tel" name="number" class="modal__block-field" placeholder="телефон*">
