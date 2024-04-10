@@ -16,7 +16,7 @@ class LocaleMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $excludedPaths = ['admin', 'admin/*', 'sendOrder', 'sendApplication'];
+        $excludedPaths = ['admin', 'admin/*', 'sendOrder', 'sendApplication', 'sendRespond'];
 
         // Проверяем, соответствует ли текущий запрос одному из исключённых путей
         foreach ($excludedPaths as $path) {
