@@ -8,13 +8,13 @@
                 <path d="M23.75 5L5 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>                
         </a>
-        <form action="">
-            <div class="modal__block-form">
-                <input type="text" class="modal__block-field" placeholder="ваше имя*">
-                <input type="tel" class="modal__block-field" placeholder="телефон*">
-                <textarea class="modal__block-field textarea" placeholder="Ваше сообщение"></textarea>
+        
+                    <form action="{{route('sendApplication')}}" method="POST">            <div class="modal__block-form">
+                <input type="text" class="modal__block-field" name="name" placeholder="ваше имя*">
+                <input type="tel" class="modal__block-field" name="number" placeholder="телефон*">
+                <textarea class="modal__block-field textarea" name="text" placeholder="Ваше сообщение"></textarea>
                 <div class="modal__block-bot">
-                    <button class="modal__block-submit">отправить</button>
+                    <button type="submit"class="modal__block-submit">отправить</button>
                     <p class="modal__block-politic">Нажимая кнопку “Отправить” вы даёте согласие на обработку  персональных данных</p>
                 </div>
             </div>
