@@ -114,7 +114,7 @@ class OrderController extends Controller
     
     public function send_appl(Request $request){
         
-        $order = new Order;
+        $order = new Application;
         $order->name = $request->name;
         $order->number = $request->phone;
         $order->text = $request->text;
