@@ -9,7 +9,7 @@
             </svg>                
         </a>
         
-                    <form action="{{route('sendApplication')}}" method="POST">            <div class="modal__block-form">
+                    <form action="{{route('sendApplication')}}" method="POST">  @csrf          <div class="modal__block-form">
                 <input type="text" class="modal__block-field" name="name" placeholder="ваше имя*">
                 <input type="tel" class="modal__block-field" name="number" placeholder="телефон*">
                 <textarea class="modal__block-field textarea" name="text" placeholder="Ваше сообщение"></textarea>
