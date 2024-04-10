@@ -51,7 +51,7 @@
             </tr>
             <tr>
                 <td>Марка</td>
-                <td>{{ $data{'mark'} }}</td>
+                <td>{{ $data['mark'] }}</td>
             </tr>
             <tr>
                 <td>Модель машины</td>
