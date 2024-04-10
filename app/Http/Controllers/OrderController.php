@@ -95,13 +95,14 @@ class OrderController extends Controller
             $pdf = PDF::loadView('report_type_2', $data); // Используйте второе представление
             
         }
-        
+        try {
             \Log::info('Attempting to send email to: ' . setting('.email_get'));
             Mail::to(setting('.email_get'))->send(new OrderMail($data));
             $message = 'Заявка успешно отправленна и email уведомление отправлено.';
-        
-            
-        
+        } catch (\Exception $e) {
+            \Log::error('Error sending email: ' . $e->getMessage());
+            $message = 'Заявка успешно отправленна.';
+        }
         return $pdf->download('report.pdf'); // Сохраняем или отображаем PDF
         
     }
