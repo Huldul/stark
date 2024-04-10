@@ -51,8 +51,7 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::post('/sendOrder', [OrderController::class, 'send_order'])->name('sendOrder');
 Route::post('/sendApplication', [OrderController::class, 'send_appl'])->name('sendApplication');
-
-
+Route::post('/sendRespond', [OrderController::class, 'send_responde'])->name('sendRespond');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
