@@ -1,4 +1,4 @@
-@if (isset($data->categ))
+@if (isset($data['categ']))
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,12 +77,14 @@
             <tr>
                 <td colspan="2"><h3>Дополнительные услуги:</h3></td>
             </tr>
+            @if (isset($data['additional_services']))
             @foreach($data['additional_services'] as $service)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $service->title }}</td>
                 </tr>
             @endforeach
+            @endif
             <!-- Новые добавленные данные -->
             <tr>
                 <td>Имя заказчика</td>
@@ -169,10 +171,12 @@
         <tr>
             <td>Выбранные элементы</td>
             <td>
-                <ul>
+                <ul>@if (isset($data['elements']))
                     @foreach($data['elements'] as $element)
-                        <li>{{ $element->title }}</li>
-                    @endforeach
+                    <li>{{ $element->title }}</li>
+                @endforeach
+                @endif
+                   
                 </ul>
             </td>
         </tr>
@@ -184,9 +188,11 @@
             <td>Дополнительные услуги</td>
             <td>
                 <ul>
+                    @if (isset($data['additional_services']))
                     @foreach($data['additional_services'] as $data->service)
                         <li>{{ $data->loop->iteration }} - {{ $data->service->title }} руб.</li>
                     @endforeach
+                    @endif
                 </ul>
             </td>
         </tr>
