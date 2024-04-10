@@ -66,5 +66,60 @@ return [
         'en' => 'Promotions',
         'kz' => 'Акциялар',
     ],
-            
+    'contact_us' => [
+        'ru' => 'Свяжитесь с нами',
+        'en' => 'Contact us',
+        'kz' => 'Бізбен байланысыңыз',
+    ],
+    'leave_your_contact_info' => [
+        'ru' => 'Оставьте свои контактные данные и наш менеджер свяжется с вами для уточнения деталей.',
+        'en' => 'Leave your contact information and our manager will contact you to clarify the details.',
+        'kz' => 'Байланыс деректеріңізді қалдырыңыз, біздің менеджер сізбен байланысып, толығырақ ақпарат алу үшін сұрақтарды нақтылайды.',
+    ],
+    'send' => [
+        'ru' => 'Отправить',
+        'en' => 'Send',
+        'kz' => 'Жіберу',
+    ],
+    'your_name' => [
+        'ru' => 'Ваше имя*',
+        'en' => 'Your name*',
+        'kz' => 'Сіздің атыңыз*',
+    ],
+    'phone' => [
+        'ru' => 'Телефон*',
+        'en' => 'Phone*',
+        'kz' => 'Телефон*',
+    ],
+    'your_message' => [
+        'ru' => 'Ваше сообщение',
+        'en' => 'Your message',
+        'kz' => 'Сіздің хабарламаңыз',
+    ],
+    'consent_to_processing' => [
+        'ru' => 'Нажимая кнопку “Отправить” вы даёте согласие на обработку персональных данных',
+        'en' => 'By clicking the "Send" button, you consent to the processing of personal data',
+        'kz' => '“Жіберу” батырмасын басу арқылы сіз жеке деректерді өңдеуге келісім бересіз',
+    ],
+    'get_in_touch' => [
+        'ru' => 'Связаться с нами',
+        'en' => 'Get in touch',
+        'kz' => 'Бізбен байланысу',
+    ],
+    'order_service' => [
+        'ru' => 'Заказать услугу',
+        'en' => 'Order service',
+        'kz' => 'Қызмет тапсырыс беру',
+    ],
+    'privacy_policy' => [
+        'ru' => 'Политика конфиденциальности',
+        'en' => 'Privacy Policy',
+        'kz' => 'Құпиялылық саясаты',
+    ],
+    'site_developed_by' => [
+        'ru' => 'Сайт разработан',
+        'en' => 'Site developed by',
+        'kz' => 'Сайт жасаған',
+    ],
+                                            
 ];

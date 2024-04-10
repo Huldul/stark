@@ -10,7 +10,7 @@
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="breadcrumbs__list-link">@trans('homepage')</a>
                 </li>
                 <li class="breadcrumbs__list-item">
-                    <a href="#" class="breadcrumbs__list-link active">О компании</a>
+                    <a href="#" class="breadcrumbs__list-link active">@trans('about_company')</a>
                 </li>
             </ul>
         </div>
@@ -19,7 +19,7 @@
         <section class="about">
             <div class="container">
                 <div class="about__container sample__container">
-                    <h1 class="about__title title-inner">О компании</h1>
+                    <h1 class="about__title title-inner">@trans('about_company')</h1>
                     <div class="about__mission">
                         <div class="about__mission-left">
                             <h2> {!!$page->mission!!}</h2>

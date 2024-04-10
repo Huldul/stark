@@ -1,7 +1,7 @@
 <div class="modal modal-feedback">
     <div class="modal__block">
-        <div class="modal__block-title js-career-title">Свяжитесь с нами</div>
-        <div class="modal__block-text">Оставьте свои контактные данные и наш менеджер свяжется с вами для уточнения деталей.</div>
+        <div class="modal__block-title js-career-title">@trans('contact_us')</div>
+        <div class="modal__block-text">@trans('leave_your_contact_info')</div>
         <a href="javascript:;" class="modal__block-close">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 5L23.75 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -10,12 +10,12 @@
         </a>
         
                     <form action="{{route('sendApplication')}}" method="POST">  @csrf          <div class="modal__block-form">
-                <input type="text" class="modal__block-field" name="name" placeholder="ваше имя*">
-                <input type="tel" class="modal__block-field" name="number" placeholder="телефон*">
-                <textarea class="modal__block-field textarea" name="text" placeholder="Ваше сообщение"></textarea>
+                <input type="text" class="modal__block-field" name="name" placeholder="@trans('your_name')">
+                <input type="tel" class="modal__block-field" name="number" placeholder="@trans('phone')">
+                <textarea class="modal__block-field textarea" name="text" placeholder="@trans('your_message')"></textarea>
                 <div class="modal__block-bot">
-                    <button type="submit"class="modal__block-submit">отправить</button>
-                    <p class="modal__block-politic">Нажимая кнопку “Отправить” вы даёте согласие на обработку  персональных данных</p>
+                    <button type="submit"class="modal__block-submit">@trans('send')</button>
+                    <p class="modal__block-politic">@trans('consent_to_processing')</p>
                 </div>
             </div>
         </form>
@@ -34,27 +34,27 @@
                 <nav class="footer__nav">
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <a href="{{ route('tasks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Услуги</a>
+                            <a href="{{ route('tasks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('services')</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="{{ route('prices', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Цены</a>
+                            <a href="{{ route('prices', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('prices')</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="footer__list-link">О Компании</a>
+                            <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('about_company')</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="{{ route('team', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Команда</a>
+                            <a href="{{ route('team', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('team')</a>
                         </li>
                     </ul>
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <a href="{{ route('career', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Карьера</a>
+                            <a href="{{ route('career', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('career')</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="{{ route('stocks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Акции</a>
+                            <a href="{{ route('stocks', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('promotions')</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="footer__list-link">Контакты</a>
+                            <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="footer__list-link">@trans('contacts')</a>
                         </li>
                         <li class="footer__list-socials">
                             <a href="{{setting('.instagram')}}" class="footer__list-social">
@@ -80,16 +80,16 @@
                         <a href="mailto:{{setting('.email')}}" class="footer__info-link">{{setting('.email')}}</a>
                     </li>
                     <li class="footer__info-item">
-                        <a href="javascript:;" class="footer__info-link red js-feedback">связаться с нами</a>
+                        <a href="javascript:;" class="footer__info-link red js-feedback">@trans('get_in_touch')</a>
                     </li>
                 </ul>
-                <a href="javascript:;" class="footer__link js-btn-modal-feedback">Заказать услугу</a>
+                <a href="javascript:;" class="footer__link js-btn-modal-feedback">@trans('order_service')</a>
             </div>
             <div class="footer__bot">
                 <span class="footer__bot-stark">©2024 - STARK</span>
-                <a href="#" class="footer__bot-politics">Политика конфиденциальности</a>
+                <a href="#" class="footer__bot-politics">@trans('privacy_policy')</a>
                 <a href="https://astana-creative.kz" target="_blank" class="footer__bot-develop">
-                    Сайт разработан <span>Astana Creative</span>
+                    @trans('site_developed_by') <span>Astana Creative</span>
                 </a>
             </div>
         </div>
