@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-    <!-- test commit -->
     <main>
         <section class="hero">
             <div class="container">
@@ -573,6 +572,4 @@
             </div>
         </section>
     </main>
-   
-    <!-- loader form -->
     @endsection
