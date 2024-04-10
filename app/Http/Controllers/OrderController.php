@@ -11,6 +11,7 @@ use PDF;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Order;
 use App\Models\Application;
+use App\Models\Respond;
 
 class OrderController extends Controller
 {
@@ -122,6 +123,12 @@ class OrderController extends Controller
         return redirect()->back();
     }
     public function send_responde(Request $request){
-        dd($request);
+        
+        $order = new Respond;
+        $order->name = $request->name;
+        $order->number = $request->number;
+        $order->vacancy = $request->vacancy;
+        $order->save();
+        return redirect()->back();
     }
 }
