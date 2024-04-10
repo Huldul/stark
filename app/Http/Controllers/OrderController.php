@@ -1,4 +1,4 @@
-<?php
+1<?php
 
 namespace App\Http\Controllers;
 
@@ -110,5 +110,8 @@ class OrderController extends Controller
                 return null; // Или какое-то значение по умолчанию
         }
     }
-
+    
+    public function send_order(Request $request){
+        dd($request);
+    }
 }
