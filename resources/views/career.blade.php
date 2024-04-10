@@ -52,7 +52,8 @@
                 <path d="M23.75 5L5 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>                
         </a>
-        <form action="">
+        
+        <form action="{{route('sendRespond')}}" method="POST">
             <div class="modal__block-form">
                 <input type="text" name="name" class="modal__block-field" placeholder="ваше имя*">
                 <input type="tel" name="number" class="modal__block-field" placeholder="телефон*">
