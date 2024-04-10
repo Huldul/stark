@@ -47,8 +47,20 @@
             <th>Значение</th>
         </tr>
         <tr>
-            <td>Пленка</td>
-            <td>{{ $brand->title }}</td>
+            <td>Марка</td>
+            <td>{{ $mark }}</td>
+        </tr>
+        <tr>
+            <td>Модель машины</td>
+            <td>{{ $model }}</td>
+        </tr>
+        <tr>
+            <td>Год выпуска модели</td>
+            <td>{{ $year }}</td>
+        </tr>
+        <tr>
+            <td>Комплектация</td>
+            <td>{{ $complect }}</td>
         </tr>
         <tr>
             <td>Выбранные элементы</td>
@@ -61,20 +73,8 @@
             </td>
         </tr>
         <tr>
-            <td>Год выпуска модели</td>
-            <td>{{ $year }}</td>
-        </tr>
-        <tr>
-            <td>Модель машины</td>
-            <td>{{ $model }}</td>
-        </tr>
-        <tr>
-            <td>Марка</td>
-            <td>{{ $mark }}</td>
-        </tr>
-        <tr>
-            <td>Комплектация</td>
-            <td>{{ $complect }}</td>
+            <td>Пленка</td>
+            <td>{{ $brand->title }}</td>
         </tr>
         <tr>
             <td>Дополнительные услуги</td>
