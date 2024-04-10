@@ -54,13 +54,13 @@
         </a>
         <form action="">
             <div class="modal__block-form">
-                <input type="text" class="modal__block-field" placeholder="ваше имя*">
-                <input type="tel" class="modal__block-field" placeholder="телефон*">
-                <select class="modal__block-select js-career-select">
+                <input type="text" name="name" class="modal__block-field" placeholder="ваше имя*">
+                <input type="tel" name="number" class="modal__block-field" placeholder="телефон*">
+                <select name="vacancy" class="modal__block-select js-career-select">
                     <option selected hidden disabled></option>
                     
                     @foreach ($vacs as $key => $vac)
-                    <option value="{{$key}}">{{$vac->title}}</option>
+                    <option value="{{$vac->title}}">{{$vac->title}}</option>
                     @endforeach
                     
                 </select>
