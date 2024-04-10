@@ -50,6 +50,7 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 Route::post('/sendOrder', [OrderController::class, 'send_order'])->name('sendOrder');
+Route::post('/sendApplication', [OrderController::class, 'send_appl'])->name('sendApplication');
 
 
 
