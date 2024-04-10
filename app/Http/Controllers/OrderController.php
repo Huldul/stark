@@ -111,7 +111,7 @@ class OrderController extends Controller
         }
     }
     
-    public function send_order(Request $request){
+    public function send_appl(Request $request){
         dd($request);
     }
 }
