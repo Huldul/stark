@@ -53,7 +53,7 @@ class OrderController extends Controller
             $order->number = $request->phone;
             $order->order = $pdfFileName; // Сохраняем только имя файла для упрощения доступа
             $order->save();
-            return view('report_type_1', $data);
+            
             // Возвращаем PDF пользователю
             
             
@@ -89,7 +89,7 @@ class OrderController extends Controller
             $order->order = $pdfFileName; // Сохраняем только имя файла для упрощения доступа
             $order->save();
             $pdf = PDF::loadView('report_type_2', $data); // Используйте второе представление
-            return view('report_type_2', $data);
+            
         }
 
         // return $pdf->download('report.pdf'); // Сохраняем или отображаем PDF
