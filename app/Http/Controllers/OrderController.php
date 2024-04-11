@@ -97,7 +97,7 @@ class OrderController extends Controller
         }
         try {
             \Log::info('Sending email to: ' . setting('.email_get'));
-            Mail::to(setting('.email_get'))->send(new OrderMail($request->all()));
+            Mail::to(setting('.email_get'))->send(new OrderMail($data));
             $message = 'Заявка успешно отправленна и email уведомление отправлено.';
         } catch (\Exception $e) {
             \Log::error('Error sending email: ' . $e->getMessage());
