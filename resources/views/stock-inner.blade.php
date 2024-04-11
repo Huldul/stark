@@ -29,7 +29,7 @@
                             <div class="inner__block-shares">
                                 <span>Поделиться в социальных сетях</span>
                                 <div class="inner__block-share">
-                                    <a href="#" target="_blank">
+                                    <a href="https://vk.com/share.php?url={{ urlencode(url()->current()) }}" target="_blank">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_20_1113)">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24 32H8C5.87827 32 3.84344 31.1571 2.34315 29.6569C0.842855 28.1566 0 26.1217 0 24V8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0L24 0C26.1217 0 28.1566 0.842855 29.6569 2.34315C31.1571 3.84344 32 5.87827 32 8V24C32 26.1217 31.1571 28.1566 29.6569 29.6569C28.1566 31.1571 26.1217 32 24 32Z" fill="#4682C3"/>
@@ -42,7 +42,7 @@
                                             </defs>
                                         </svg>                                            
                                     </a>
-                                    <a href="#" target="_blank">
+                                    <a href="https://wa.me/?text={{ urlencode(url()->current()) }}" target="_blank">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_20_1118)">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24 32H8C5.87827 32 3.84344 31.1571 2.34315 29.6569C0.842855 28.1566 0 26.1217 0 24V8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0L24 0C26.1217 0 28.1566 0.842855 29.6569 2.34315C31.1571 3.84344 32 5.87827 32 8V24C32 26.1217 31.1571 28.1566 29.6569 29.6569C28.1566 31.1571 26.1217 32 24 32Z" fill="#00D264"/>
@@ -56,7 +56,7 @@
                                             </defs>
                                         </svg>                                            
                                     </a>
-                                    <a href="#" target="_blank">
+                                    <a href="https://t.me/share/url?url={{ urlencode(url()->current()) }}" target="_blank">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_20_1125)">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24 32H8C5.87827 32 3.84344 31.1571 2.34315 29.6569C0.842855 28.1566 0 26.1217 0 24V8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0L24 0C26.1217 0 28.1566 0.842855 29.6569 2.34315C31.1571 3.84344 32 5.87827 32 8V24C32 26.1217 31.1571 28.1566 29.6569 29.6569C28.1566 31.1571 26.1217 32 24 32Z" fill="#199BDF"/>
@@ -69,7 +69,7 @@
                                             </defs>
                                         </svg>                                            
                                     </a>
-                                    <a href="#" target="_blank">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_20_1130)">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 32H8C5.87827 32 3.84344 31.1571 2.34315 29.6569C0.842855 28.1566 0 26.1217 0 24V8C0 5.87827 0.842855 3.84344 2.34315 2.34315C3.84344 0.842855 5.87827 0 8 0L24 0C26.1217 0 28.1566 0.842855 29.6569 2.34315C31.1571 3.84344 32 5.87827 32 8V24C32 26.1217 31.1571 28.1566 29.6569 29.6569C28.1566 31.1571 26.1217 32 24 32H21C21 31.337 20.7366 30.7011 20.2678 30.2322C19.7989 29.7634 19.163 29.5 18.5 29.5C17.837 29.5 17.2011 29.7634 16.7322 30.2322C16.2634 30.7011 16 31.337 16 32Z" fill="#3764B9"/>
