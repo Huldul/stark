@@ -87,7 +87,7 @@
             </div>
             <div class="footer__bot">
                 <span class="footer__bot-stark">©2024 - STARK</span>
-                <a href="#" class="footer__bot-politics">@trans('privacy_policy')</a>
+                <!-- <a href="#" class="footer__bot-politics">@trans('privacy_policy')</a> -->
                 <a href="https://astana-creative.kz" target="_blank" class="footer__bot-develop">
                     @trans('site_developed_by') <span>Astana Creative</span>
                 </a>
