@@ -8,8 +8,8 @@
                 <path d="M23.75 5L5 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>                
         </a>
-        
-                    <form action="{{route('sendApplication')}}" method="POST">  @csrf          <div class="modal__block-form">
+        <form action="{{route('sendApplication')}}" method="POST" onSubmit="submitForm()">  @csrf          
+            <div class="modal__block-form">
                 <input type="text" class="modal__block-field" name="name" placeholder="@trans('your_name')">
                 <input type="tel" class="modal__block-field" name="number" placeholder="@trans('phone')">
                 <textarea class="modal__block-field textarea" name="text" placeholder="@trans('your_message')"></textarea>
