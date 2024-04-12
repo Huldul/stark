@@ -24,13 +24,13 @@
 <script src="{{asset("js/swiper-bundle.min.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/app.js?_v=20240329172913")}}"></script>
 
-    <div class="popup form_loader " id="form_loader ">
-    <div class="form_loader_block ">
-        <div class="form_loader_animate "></div>
-        <div class="form_loader_text " style="color: #000; ">Пожалуйста, подождите</div>
+<div class="popup form_loader" id="form_loader">
+    <div class="form_loader_block">
+        <div class="form_loader_animate"></div>
+        <div class="form_loader_text" style="color: #000;">Пожалуйста, подождите</div>
     </div>
 </div>
-    <!-- loader form -->
+<!-- loader form -->
 </body>
 
 </html>
