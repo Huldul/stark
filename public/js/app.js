@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const thirdStepIndividual = calcSection.querySelector('#individual-elements');
         const calcStepWrap = calcSection.querySelector('.calc__wrap-steps');
         let calcTotalPrice = calcSection.querySelector('.calc__total-summa span');
+        let calcTotalPriceInput = calcSection.querySelector('#totalSumInput');
         let currentStep = 0;
         prevBtn.addEventListener('click', prevStep);
         nextBtn.addEventListener('click', nextStep);
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(item.hasAttribute('data-price') && item.checked) {
                         let summ =+ item.getAttribute('data-price');
                         calcTotalPrice.innerHTML = +(calcTotalPrice.innerHTML) - summ;
+                        calcTotalPriceInput.value = +(calcTotalPrice.innerHTML) - summ;
                     }
                     if((item.type == 'checkbox') || (item.type == 'radio')) {
                         item.checked = false;
@@ -204,14 +206,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 let targetPrice = parseInt(target.getAttribute('data-price'));
                 if(target.checked) {
                     calcTotalPrice.innerHTML = parseInt(calcTotalPrice.innerHTML) + targetPrice;
+                    calcTotalPriceInput.value = parseInt(calcTotalPrice.innerHTML) + targetPrice;
                 } else {
                     calcTotalPrice.innerHTML = parseInt(calcTotalPrice.innerHTML) - targetPrice;
+                    calcTotalPriceInput.value = parseInt(calcTotalPrice.innerHTML) - targetPrice;
                 }
             }
             if(target.hasAttribute('data-price') && target.type == 'radio') {
                 let targetPrice = parseInt(target.getAttribute('data-price'));
                 if (target.checked) {
                     calcTotalPrice.innerHTML = targetPrice;
+                    calcTotalPriceInput.value = targetPrice;
                 }
             }
         });

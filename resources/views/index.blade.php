@@ -378,6 +378,7 @@
                                         <div class="calc__step-1-fields">
                                             <input type="text" name="name" placeholder="имя" class="js-name">
                                             <input type="tel" name="phone" placeholder="номер телефона (c whatsapp)" class="js-phone">
+                                            <input type="hidden" name="total_sum" id="totalSumInput">
                                         </div>
                                         <label for="feedback-calc" class="calc__step-checkbox">
                                             <input type="checkbox" name="want" id="feedback-calc" class="js-feedback">

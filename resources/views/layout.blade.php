@@ -23,7 +23,7 @@
 <script src="{{asset("js/jquery-marquee.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/swiper-bundle.min.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/jquery.maskedinput.min.js")}}"></script>
-<script src="{{asset("js/app.js?_v=20240329172913")}}"></script>
+<script src="{{asset("js/app.js?_v=2.1")}}"></script>
 <!-- ALERT FORM -->
 
 <!-- ALERT FORM END -->
