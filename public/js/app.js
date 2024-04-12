@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(item.hasAttribute('data-price') && item.checked) {
                         let summ =+ item.getAttribute('data-price');
                         calcTotalPrice.innerHTML = +(calcTotalPrice.innerHTML) - summ;
-                        calcTotalPriceInput.value = +(calcTotalPrice.innerHTML) - summ;
+                        calcTotalPriceInput.value = +(calcTotalPriceInput.value) - summ;
                     }
                     if((item.type == 'checkbox') || (item.type == 'radio')) {
                         item.checked = false;
@@ -206,10 +206,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 let targetPrice = parseInt(target.getAttribute('data-price'));
                 if(target.checked) {
                     calcTotalPrice.innerHTML = parseInt(calcTotalPrice.innerHTML) + targetPrice;
-                    calcTotalPriceInput.value = parseInt(calcTotalPrice.innerHTML) + targetPrice;
+                    calcTotalPriceInput.value = parseInt(calcTotalPriceInput.value) + targetPrice;
                 } else {
                     calcTotalPrice.innerHTML = parseInt(calcTotalPrice.innerHTML) - targetPrice;
-                    calcTotalPriceInput.value = parseInt(calcTotalPrice.innerHTML) - targetPrice;
+                    calcTotalPriceInput.value = parseInt(calcTotalPriceInput.value) - targetPrice;
                 }
             }
             if(target.hasAttribute('data-price') && target.type == 'radio') {
