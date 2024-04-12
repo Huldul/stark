@@ -24,7 +24,7 @@
 <script src="{{asset("js/swiper-bundle.min.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/app.js?_v=20240329172913")}}"></script>
 <!-- ALERT FORM -->
-    <div class="alert--fixed box-size <?= ( isset($msg) && $msg[0]['message'] && $msg_type) ? $msg_type : '' ?>" hidden>
+    <!-- <div class="alert--fixed box-size <?= ( isset($msg) && $msg[0]['message'] && $msg_type) ? $msg_type : '' ?>" hidden>
 	    <div class="alert--content alert--width alert--block box-size">
 		            <div class="alert--img">
 		                <div class="alert--img__item active box-size">
@@ -79,7 +79,7 @@
 		            </div>
 	    </div>
 	    <div class="alert--bg alert--close box-size"></div>
-	</div>
+	</div> -->
 <!-- ALERT FORM END -->
 <div class="popup form_loader" id="form_loader">
     <div class="form_loader_block">
