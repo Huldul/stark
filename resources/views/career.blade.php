@@ -5,19 +5,19 @@
 
     <main>
         <section class="breadcrumbs">
-    <div class="container">
-        <div class="breadcrumbs__container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__list-item">
-                    <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="breadcrumbs__list-link">Главная</a>
-                </li>
-                <li class="breadcrumbs__list-item">
-                    <a href="#" class="breadcrumbs__list-link active">О компании</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+            <div class="container">
+                <div class="breadcrumbs__container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__list-item">
+                            <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="breadcrumbs__list-link">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__list-item">
+                            <a href="#" class="breadcrumbs__list-link active">О компании</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <section class="career">
             <div class="container">
                 <div class="career__container sample__container">
@@ -53,7 +53,7 @@
             </svg>                
         </a>
         
-        <form action="{{route('sendRespond')}}" method="POST"> @csrf
+        <form action="{{route('sendRespond')}}" method="POST" onSubmit="submitForm()"> @csrf
             <div class="modal__block-form">
                 <input type="text" name="name" class="modal__block-field" placeholder="ваше имя*">
                 <input type="tel" name="number" class="modal__block-field" placeholder="телефон*">
