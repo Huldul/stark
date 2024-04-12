@@ -207,7 +207,7 @@
                         </div>
                         <a href="javascript:;" class="calc__link-feedback js-btn-modal-feedback">заказать услугу</a>
                     </div>
-                    <form action="{{route('sendOrder')}}" method="POST">
+                    <form action="{{route('sendOrder')}}" method="POST" onSubmit="submitForm()">
                         @csrf
                         <div class="calc__wrap">
                             <div class="calc__wrap-steps">
