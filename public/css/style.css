@@ -3388,8 +3388,8 @@ select {
   }
 
   .service__items {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .sample__container {
@@ -3743,6 +3743,10 @@ select {
 
   .calc__step-politics {
     font-size: 14px;
+  }
+
+  .service__items {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
