@@ -187,7 +187,7 @@
                                 </div>
                                 <div class="tarif__item-price">
                                     <span>{{$tarTran->price1}}</span>
-                                    <span>{{$tarTran->price1}} ₸</span>
+                                    <span>{{$tarTran->price2}} ₸</span>
                                 </div>
                             </a>
                             @endforeach

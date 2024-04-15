@@ -129,7 +129,7 @@ class OrderController extends Controller
         $order->number = $request->number;
         $order->text = $request->text;
         $order->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', "Отправка прошла успешно");
     }
     public function send_responde(Request $request){
         
@@ -138,6 +138,6 @@ class OrderController extends Controller
         $order->number = $request->number;
         $order->vacancy = $request->vacancy;
         $order->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', "Отправка прошла успешно");
     }
 }
