@@ -1,4 +1,4 @@
-@if(session('success'))<div class="alert--fixed box-size">
+@if(session('success'))<div class="alert--fixed box-size alert--active">
     <div class="alert--content alert--width alert--block box-size">
     <div class="alert--img">
     <div class="alert--img__item active box-size">
