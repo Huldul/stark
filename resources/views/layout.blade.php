@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="{{asset("img/favicon.png")}}" type="image/x-icon">
     <title>Главная</title>
     <link rel="stylesheet" href="{{asset("css/swiper-bundle.min.css?_v=20240329172913")}}">
-    <link rel="stylesheet" href="{{asset("css/style.css?_v=2.1")}}">
+    <link rel="stylesheet" href="{{asset("css/style.css?_v=2.11")}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 

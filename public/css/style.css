@@ -1403,7 +1403,7 @@ select {
   background: var(--red, #DC2128);
   filter: blur(149.4627380371px);
   left: 0;
-  top: 30%;
+  top: 20%;
   width: 800px;
   height: 800px;
   max-width: 100%;
@@ -1869,6 +1869,8 @@ select {
 .inner__block-share a {
   display: flex;
   transition: 0.2s ease-in-out;
+  width: 32px;
+  height: 32px;
 }
 
 .inner__block-share a svg {
@@ -1891,6 +1893,9 @@ select {
   transform: translateY(-50%);
   z-index: 2;
   transition: 0.2s ease-in-out;
+  width: 70px;
+  height: 70px;
+  display: flex;
 }
 
 .inner__slider-arrow svg {
@@ -3366,8 +3371,8 @@ select {
   }
 
   .exp::before {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
   }
 
   .exp__item-count {
@@ -3486,8 +3491,8 @@ select {
   }
 
   .career::before {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
   }
 
   .contacts::before {
