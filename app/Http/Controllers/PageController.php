@@ -72,7 +72,7 @@ class PageController extends Controller
         ]);
     }
     public function tasks(){
-        $untrTask = Task::paginate(4);
+        $untrTask = Task::paginate(12);
         $tasks = $this->translateCollection($untrTask ,app()->getLocale());
 
         return view('service',[
@@ -143,7 +143,7 @@ class PageController extends Controller
     
     public function team(){
         
-        $untrWor = Worker::paginate(6);
+        $untrWor = Worker::paginate(13);
         $workers = $this->translateCollection($untrWor ,app()->getLocale());
         
         return view('team', [
@@ -152,7 +152,7 @@ class PageController extends Controller
     }
     public function stocks(){
         
-        $untrStock = Stock::paginate(6);
+        $untrStock = Stock::paginate(12);
         $stocks = $this->translateCollection($untrStock ,app()->getLocale());
         
         return view('stock', [

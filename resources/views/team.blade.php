@@ -11,7 +11,7 @@
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="breadcrumbs__list-link">Главная</a>
                 </li>
                 <li class="breadcrumbs__list-item">
-                    <a href="#" class="breadcrumbs__list-link active">О компании</a>
+                    <a href="#" class="breadcrumbs__list-link active">@trans('team')</a>
                 </li>
             </ul>
         </div>
@@ -26,7 +26,7 @@
                         Мы ценим и уважаем каждого клиента, признаваяуникальность каждого автомобиля и истории его владельца.
                     </p>
                     <div class="team__image">
-                        <img src="{{asset("img/team-1.jpg")}}" alt="">
+                        <img src="{{asset("storage/".setting('.team_image'))}}" alt="">
                     </div>
 
                     <div class="team__items">
@@ -47,6 +47,7 @@
                         </div>
                         @endforeach
                     </div>
+                    @if ($workers->lastPage() > 1)
                     <ul class="pagination">
                         {{-- Предыдущая страница --}}
                         @if ($workers->onFirstPage())
@@ -95,6 +96,7 @@
                             </li>
                         @endif
                     </ul>
+                    @endif
                 </div>
             </div>
         </section>

@@ -11,7 +11,7 @@
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="breadcrumbs__list-link">Главная</a>
                 </li>
                 <li class="breadcrumbs__list-item">
-                    <a href="#" class="breadcrumbs__list-link active">О компании</a>
+                    <a href="#" class="breadcrumbs__list-link active">{{$task->title}}</a>
                 </li>
             </ul>
         </div>
