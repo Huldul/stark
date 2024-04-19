@@ -76,7 +76,8 @@
                         </div>
                         <a href="javascript:;" class="calc__link-feedback js-btn-modal-feedback">заказать услугу</a>
                     </div>
-                    <form action="" onSubmit="submitForm()">
+                    <!-- onSubmit="submitForm()" -->
+                    <form action="" >
                         <div class="calc__wrap">
                             <div class="calc__wrap-steps">
                                 <div class="calc__step active">
