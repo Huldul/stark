@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отчет по заказу 1</title>
     <style>
-        @font-face {
+        /* @font-face {
             font-family: 'DejaVu Sans';
             font-style: normal;
             font-weight: 400;
             src: url({{ storage_path('fonts/DejaVuSans.ttf') }}) format('truetype');
-        }
+        } */
         body {
-            /* font-family: sans-serif; */
+            font-family: unset;
         }
         .header {
             text-align: center;
