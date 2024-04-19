@@ -12,8 +12,9 @@
             src: url({{ storage_path('fonts/DejaVuSans.ttf') }}) format('truetype');
         }
         body {
-            /* font-family: sans-serif; */
+            font-family: 'DejaVu Sans', sans-serif;
         }
+
         .header {
             text-align: center;
             margin-bottom: 20px;
