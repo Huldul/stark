@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отчет по заказу 2</title>
     <style>
+        @charset "UTF-8";
         @font-face {
             font-family: 'DejaVu Sans';
             font-style: normal;
