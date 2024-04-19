@@ -13,6 +13,7 @@
         }
         body {
             font-family: 'DejaVu Sans', sans-serif;
+            color: #000;
         }
 
         .header {
