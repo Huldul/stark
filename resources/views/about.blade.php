@@ -136,7 +136,7 @@
                         <div class="about__sertificates-slider swiper">
                             <div class="swiper-wrapper">
                                 @foreach ($sers as $ser)
-                                <div class="about__sertificates-item swiper-slide" data-fancybox="sertificates" data-src="">
+                                <div class="about__sertificates-item swiper-slide" data-fancybox="sertificates" data-src="{{asset("storage/".$ser->image)}}">
                                     <img src="{{asset("storage/".$ser->image)}}" alt="">
                                 </div>
                                 @endforeach
