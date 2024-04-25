@@ -114,7 +114,7 @@
                         <a href="tel:{{setting('.number2')}}">{{setting('.number2')}}</a>
                     </div>
                     <div class="header__socials">
-                        <a href="setting('.wa')" target="_blank">
+                        <a href="{{setting('.wa')}}" target="_blank">
                             <img src="{{asset("img/wp-icon.png")}}" alt="">
                         </a>
                         <a href="{{setting('.instagram')}}" target="_blank">
