@@ -1,0 +1,18 @@
+name: Run Laravel Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: mbstring, xml, ctype, json, bcmath, pdo_mysql
+    - name: Install Composer Dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+    - name: Execute Tests
+      run: php artisan test
