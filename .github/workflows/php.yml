@@ -10,22 +10,6 @@ jobs:
   laravel-tests:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: stark
-          MYSQL_USER: root
-          MYSQL_PASSWORD: password
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping -h localhost -u root --password=password"
-          --health-interval=10s
-          --health-timeout=30s
-          --health-retries=10
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -40,13 +24,7 @@ jobs:
     - name: Setup Environment File
       run: |
         cp .env.example .env
-        echo "DB_CONNECTION=${{ env.DB_CONNECTION }}" >> .env
-        echo "DB_HOST=${{ env.DB_HOST }}" >> .env
-        echo "DB_PORT=${{ env.DB_PORT }}" >> .env
-        echo "DB_DATABASE=${{ env.DB_DATABASE }}" >> .env
-        echo "DB_USERNAME=${{ env.DB_USERNAME }}" >> .env
-        echo "DB_PASSWORD=${{ env.DB_PASSWORD }}" >> .env
-        echo "APP_KEY=${{ env.APP_KEY }}" >> .env
+        echo "APP_KEY=base64:$(php artisan key:generate --show)" >> .env
 
     - name: Install Composer dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
@@ -57,9 +35,6 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
 
-    - name: Run Migrations
-      run: php artisan migrate
-
     - name: Execute Tests (PHPUnit)
       run: vendor/bin/phpunit
 
@@ -68,11 +43,3 @@ jobs:
 
     - name: Check coding standards
       run: vendor/bin/phpcs --standard=PSR12 app
-
-    - name: Clean up
-      if: always()
-      run: php artisan migrate:rollback
-
-    - name: Check Docker logs
-      if: failure()
-      run: docker logs mysql
