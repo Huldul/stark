@@ -9,7 +9,7 @@ on:
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
-    
+
     services:
       mysql:
         image: mysql:5.7
@@ -23,17 +23,8 @@ jobs:
         options: >-
           --health-cmd="mysqladmin ping -h localhost -u root --password=password"
           --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
-
-    env:
-      DB_CONNECTION: mysql
-      DB_HOST: 127.0.0.1
-      DB_PORT: 3306
-      DB_DATABASE: stark
-      DB_USERNAME: root
-      DB_PASSWORD: password
-      APP_KEY: base64:YOUR_APP_KEY_HERE
+          --health-timeout=30s
+          --health-retries=10
 
     steps:
     - name: Checkout code
@@ -81,3 +72,7 @@ jobs:
     - name: Clean up
       if: always()
       run: php artisan migrate:rollback
+
+    - name: Check Docker logs
+      if: failure()
+      run: docker logs mysql
