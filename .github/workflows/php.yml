@@ -7,8 +7,33 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  laravel-tests:
     runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: stark
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -u root --password=password"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    env:
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_DATABASE: stark
+      DB_USERNAME: root
+      DB_PASSWORD: password
+      APP_KEY: base64:YOUR_APP_KEY_HERE
 
     steps:
     - name: Checkout code
@@ -21,21 +46,19 @@ jobs:
         extensions: mbstring, xml, ctype, json, bcmath, pdo_mysql
         coverage: pcov
 
-    - name: Get composer cache directory
-      run: echo "composer_cache_dir=$(composer config cache-files-dir)" >> $GITHUB_ENV
-
-    - name: Cache composer dependencies
-      uses: actions/cache@v3
-      with:
-        path: ${{ env.composer_cache_dir }}
-        key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-        restore-keys: ${{ runner.os }}-composer-
+    - name: Setup Environment File
+      run: |
+        cp .env.example .env
+        echo "DB_CONNECTION=${{ env.DB_CONNECTION }}" >> .env
+        echo "DB_HOST=${{ env.DB_HOST }}" >> .env
+        echo "DB_PORT=${{ env.DB_PORT }}" >> .env
+        echo "DB_DATABASE=${{ env.DB_DATABASE }}" >> .env
+        echo "DB_USERNAME=${{ env.DB_USERNAME }}" >> .env
+        echo "DB_PASSWORD=${{ env.DB_PASSWORD }}" >> .env
+        echo "APP_KEY=${{ env.APP_KEY }}" >> .env
 
     - name: Install Composer dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: Copy .env file
-      run: cp .env.example .env
 
     - name: Generate key
       run: php artisan key:generate
