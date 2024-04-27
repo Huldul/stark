@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  laravel-tests:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,18 +19,19 @@ jobs:
       with:
         php-version: '8.2'
         extensions: mbstring, xml, ctype, json, bcmath, pdo_mysql
+        tools: phpstan  # Указываем установку PHPStan через setup-php
         coverage: pcov
+
+    - name: Install Composer dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Setup Environment File
       run: |
         cp .env.example .env
         echo "APP_KEY=base64:$(php artisan key:generate --show)" >> .env
 
-    - name: Install Composer dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
-
-    - name: Generate key
-      run: php artisan key:generate
+    - name: Run PHPStan
+      run: ./vendor/bin/phpstan analyse
 
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
