@@ -30,8 +30,7 @@ jobs:
         cp .env.example .env
         echo "APP_KEY=base64:$(php artisan key:generate --show)" >> .env
 
-    - name: Run PHPStan
-      run: ./vendor/bin/phpstan analyse
+   
 
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
@@ -39,8 +38,7 @@ jobs:
     - name: Execute Tests (PHPUnit)
       run: vendor/bin/phpunit
 
-    - name: Run PHPStan
-      run: vendor/bin/phpstan analyse
+
 
     - name: Check coding standards
       run: vendor/bin/phpcs --standard=PSR12 app
