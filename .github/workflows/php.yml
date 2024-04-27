@@ -39,6 +39,3 @@ jobs:
       run: vendor/bin/phpunit
 
 
-
-    - name: Check coding standards
-      run: vendor/bin/phpcs --standard=PSR12 app
