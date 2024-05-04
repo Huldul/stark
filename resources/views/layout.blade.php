@@ -33,7 +33,7 @@
         })(window,document,'https://cdn-ru.bitrix24.ru/b28365584/crm/site_button/loader_2_dp6823.js');
 </script>
 <!-- ALERT FORM -->
-
+<!-- тестовая проверка вебхука -->
 <!-- ALERT FORM END -->
 <div class="popup form_loader" id="form_loader">
     <div class="form_loader_block">
