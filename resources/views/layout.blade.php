@@ -26,6 +26,12 @@
 <script src="{{asset("js/jquery.maskedinput.min.js")}}"></script>
 <script src="{{asset("js/jquery.fancybox.min.js")}}"></script>
 <script src="{{asset("js/app.js?_v=2.11")}}"></script>
+    <script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.ru/b28365584/crm/site_button/loader_2_dp6823.js');
+</script>
 <!-- ALERT FORM -->
 
 <!-- ALERT FORM END -->
