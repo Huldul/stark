@@ -347,7 +347,7 @@ window.onload = () => {
     });
     const heroSlider = new Swiper ('.hero__slider', {
         autoplay: true,
-        effect: 'fade',
+        // effect: 'fade',
         loop: true,
         slidesPerView: 1,
         spaceBetween: 20,
