@@ -175,15 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 model, // модель машины
                 year, // год выпуска
                 equipment, // комплектация
-                typeCar, // тип кузова 
-                solution, // решение 
+                typeCar, // тип кузова
+                solution, // решение
                 packages: packages != undefined ? packages : null, // пакет (полный || люкс)
                 individualElements: [...individualElements], // индвидуальная сборка элементов
-                filmBrand, // бренд плёнки 
+                filmBrand, // бренд плёнки
                 additionally: [...additionally], // опциональные элементы (дополнительные)
                 name, // Имя
                 phone, // Телефона
-                checkFeedback, // Нужна ли обратная связь 
+                checkFeedback, // Нужна ли обратная связь
             }
         }
 
@@ -254,7 +254,7 @@ window.onload = () => {
     });
 
     // sliders
-    let taskSlider = new Swiper('.task__slider', {
+    const taskSlider = new Swiper('.task__slider', {
         autoplay: true,
         slidesPerView: 3,
         spaceBetween: 20,
@@ -274,7 +274,7 @@ window.onload = () => {
             }
         }
     });
-    let stockSlider = new Swiper('.stock__slider', {
+    const stockSlider = new Swiper('.stock__slider', {
         autoplay: true,
         slidesPerView: 3,
         spaceBetween: 20,
@@ -294,7 +294,7 @@ window.onload = () => {
             }
         }
     });
-    let reviewSlider = new Swiper('.review__slider', {
+    const reviewSlider = new Swiper('.review__slider', {
         autoplay: true,
         slidesPerView: 3,
         spaceBetween: 20,
@@ -314,7 +314,7 @@ window.onload = () => {
             }
         }
     });
-    let innerSlider = new Swiper('.inner__slider', {
+    const innerSlider = new Swiper('.inner__slider', {
         autoplay: true,
         slidesPerView: 1,
         loop: true,
@@ -324,7 +324,7 @@ window.onload = () => {
             nextEl: '.inner__slider-arrow.next',
         },
     });
-    let sertSlider = new Swiper('.about__sertificates-slider', {
+    const sertSlider = new Swiper('.about__sertificates-slider', {
         autoplay: true,
         loop: false,
         slidesPerView: 4,
@@ -345,6 +345,13 @@ window.onload = () => {
             }
         }
     });
+    const heroSlider = new Swiper ('.hero__slider', {
+        autoplay: true,
+        effect: 'fade',
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+    })
 
     // faq accords
     var activeAccordion = null; // переменная для хранения ссылки на текущий открытый блок
@@ -373,7 +380,7 @@ window.onload = () => {
             activeAccordion = null; // удаляем ссылку на открытый блок
         }
     });
-    // 
+    //
 };
 
 // loader func
