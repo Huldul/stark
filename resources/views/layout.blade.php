@@ -9,7 +9,7 @@
     <title>Главная</title>
     <link rel="stylesheet" href="{{asset("css/swiper-bundle.min.css?_v=20240329172913")}}">
     <link rel="stylesheet" href="{{asset("css/jquery.fancybox.css")}}">
-    <link rel="stylesheet" href="{{asset("css/style.css?_v=2.12")}}">
+    <link rel="stylesheet" href="{{asset("css/style.css?_v=2.13")}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -19,13 +19,13 @@
     @include('components/footer')
 
 
-    
+
 <script src="{{asset("js/jquery-3.6.0.min.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/jquery-marquee.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/swiper-bundle.min.js?_v=20240329172913")}}"></script>
 <script src="{{asset("js/jquery.maskedinput.min.js")}}"></script>
 <script src="{{asset("js/jquery.fancybox.min.js")}}"></script>
-<script src="{{asset("js/app.js?_v=2.11")}}"></script>
+<script src="{{asset("js/app.js?_v=2.12")}}"></script>
     <script>
         (function(w,d,u){
                 var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
