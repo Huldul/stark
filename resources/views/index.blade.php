@@ -5,13 +5,13 @@
         <section class="hero">
             <div class="swiper hero__slider">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
 
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
 
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
 
                     </div>
                 </div>
