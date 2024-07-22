@@ -6,9 +6,9 @@
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 5L23.75 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M23.75 5L5 23.75" stroke="#A7A7A7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
+            </svg>
         </a>
-        <form action="{{route('sendApplication')}}" method="POST" onSubmit="submitForm()">  @csrf          
+        <form action="{{route('sendApplication')}}" method="POST" onSubmit="submitForm()">  @csrf
             <div class="modal__block-form">
                 <input type="text" class="modal__block-field" name="name" placeholder="@trans('your_name')">
                 <input type="tel" class="modal__block-field" name="number" placeholder="@trans('phone')">
@@ -71,16 +71,16 @@
                 </nav>
                 <ul class="footer__info">
                     <li class="footer__info-item">
-                        <a href="tel:{{setting('.number')}}" class="footer__info-link">{{setting('.number')}}</a>
+                        <a href="tel:{{setting('.number')}}" class="ink">{{setting('.number')}}</a>
                     </li>
                     <li class="footer__info-item">
-                        <a href="tel:{{setting('.number2')}}" class="footer__info-link">{{setting('.number2')}}</a>
+                        <a href="tel:{{setting('.number2')}}" class="ink">{{setting('.number2')}}</a>
                     </li>
                     <li class="footer__info-item">
                         <a href="mailto:{{setting('.email')}}" class="footer__info-link">{{setting('.email')}}</a>
                     </li>
                     <li class="footer__info-item">
-                        <a href="javascript:;" class="footer__info-link red js-feedback">@trans('get_in_touch')</a>
+                        <a href="javascript:;" class="footer__info-link red js-feedback js-btn-modal-feedback">@trans('get_in_touch')</a>
                     </li>
                 </ul>
                 <a href="javascript:;" class="footer__link js-btn-modal-feedback">@trans('order_service')</a>
