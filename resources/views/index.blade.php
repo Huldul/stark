@@ -6,43 +6,24 @@
             <div class="swiper hero__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="container">
-                            <div class="hero__container">
-                                <h1 class="hero__title">
-                                    {!!$page->head_title!!}
-                                </h1>
-                                <div class="hero__block">
-                                    <h2 class="hero__desc">{{$page->head_mini}}</h2>
-                                    <a href="javascript:;" class="hero__link js-btn-modal-feedback">@trans('register')</a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="swiper-slide">
-                        <div class="container">
-                            <div class="hero__container">
-                                <h1 class="hero__title">
-                                    {!!$page->head_title!!}
-                                </h1>
-                                <div class="hero__block">
-                                    <h2 class="hero__desc">{{$page->head_mini}}</h2>
-                                    <a href="javascript:;" class="hero__link js-btn-modal-feedback">@trans('register')</a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="swiper-slide">
-                        <div class="container">
-                            <div class="hero__container">
-                                <h1 class="hero__title">
-                                    {!!$page->head_title!!}
-                                </h1>
-                                <div class="hero__block">
-                                    <h2 class="hero__desc">{{$page->head_mini}}</h2>
-                                    <a href="javascript:;" class="hero__link js-btn-modal-feedback">@trans('register')</a>
-                                </div>
-                            </div>
-                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero__container">
+                    <h1 class="hero__title">
+                        {!!$page->head_title!!}
+                    </h1>
+                    <div class="hero__block">
+                        <h2 class="hero__desc">{{$page->head_mini}}</h2>
+                        <a href="javascript:;" class="hero__link js-btn-modal-feedback">@trans('register')</a>
                     </div>
                 </div>
             </div>
