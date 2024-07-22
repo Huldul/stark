@@ -953,6 +953,7 @@ select {
 
 .hero__slider {
     position: absolute;
+    width: 100vw;
 }
 
 .hero .container {
