@@ -193,12 +193,12 @@ select {
 .alert--content {
   position: relative;
   z-index: 12;
-  border-radius: 15px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: white;
-  padding: 30px;
+  padding: 50px;
   color: #333333;
   margin-bottom: 10%;
 }
@@ -1015,7 +1015,7 @@ select {
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 10%;
   top: 10%;
@@ -1398,7 +1398,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 20%;
@@ -1651,7 +1651,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 20%;
   top: 10%;
@@ -1790,7 +1790,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 10%;
@@ -1955,7 +1955,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 20%;
@@ -2136,7 +2136,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 50%;
   transform: translateX(-50%);
@@ -2261,7 +2261,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 10%;
@@ -2356,7 +2356,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 5%;
@@ -2443,7 +2443,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 50%;
   transform: translateX(-50%);
@@ -2498,7 +2498,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 10%;
