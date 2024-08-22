@@ -3,6 +3,19 @@
 @section('content')
     <main>
         <section class="hero">
+            <div class="swiper hero__slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
+
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
+
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('/img/hero-1.jpg')">
+
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="hero__container">
                     <h1 class="hero__title">
@@ -76,7 +89,7 @@
                             <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_20_88" result="shape"/>
                             </filter>
                             </defs>
-                        </svg>                            
+                        </svg>
                     </div>
                     <div class="section__header">
                         <div class="section__desc">{{$page->serv_mini}}</div>
@@ -96,7 +109,7 @@
                     <img src="{{asset("storage/".$par->image)}}" alt="">
                 </div>
                 @endforeach
-                
+
             </div>
         </section>
         <section class="task">
@@ -112,13 +125,13 @@
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="70" y="70" width="70" height="70" rx="35" transform="rotate(-180 70 70)" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M41 47L29 35L41 23" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                             <a href="javascript:;" class="task__arrow next">
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="70" height="70" rx="35" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M29 23L41 35L29 47" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -140,7 +153,7 @@
                                         <svg width="64" height="65" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="1" y="1.5" width="62" height="62" rx="31" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
                                             <path d="M27 22.5L37 32.5L27 42.5" stroke="white" stroke-opacity="0.4" stroke-width="2"/>
-                                        </svg>                                            
+                                        </svg>
                                     </div>
                                 </div>
                             </a>
@@ -174,8 +187,8 @@
                                 $firstImageUrl = $images[0] ?? null; // Используйте null coalescing operator для избежания ошибок, если массив пуст
 
                                 $tarTran = $tarif->translate(app()->getLocale());
-                                
-                                
+
+
                             @endphp
                             <a href="{{ url(app()->getLocale() .'/price-inner/'. $tarif->slug . '/') }}" class="tarif__item">
                                 <div class="tarif__item-img">
@@ -197,7 +210,7 @@
                 </div>
             </div>
         </section>
-        <section class="calc">
+        <section class="calc" style="display: none">
             <div class="container">
                 <div class="calc__container content">
                     <div class="section__header">
@@ -294,7 +307,7 @@
                                             </div>
                                             <div class="calc__step-2">
                                                 @foreach ($categs as $categ)
-                                                
+
                                                 <input type="radio" name="type_package" id="type-package-{{$loop->iteration}}" data-price="{{$categ->price}}" value="{{$categ->id}}">
                                                 <label for="type-package-{{$loop->iteration}}" class="calc__step-box">
                                                     <div class="calc__step-icon">
@@ -306,7 +319,7 @@
                                                     </div>
                                                 </label>
                                                 @endforeach
-                                                
+
                                             </div>
                                         </div>
                                         <div class="calc__step-individual" id="individual-elements">
@@ -399,7 +412,7 @@
                                     <button type="button" class="calc__buttons-item prev">назад</button>
                                     <button type="button" class="calc__buttons-item next">следующий шаг</button>
                                     <button type="submit" class="calc__buttons-item submit">получить pdf расчет</button>
-                                    <div class="calc__total-summa"><span>0</span> ₸</div> 
+                                    <div class="calc__total-summa"><span>0</span> ₸</div>
                                 </div>
                             </div>
                         </div>
@@ -431,8 +444,8 @@
                                     </li>
                                     @endif
                                 @endforeach
-                                
-                            </ul>    
+
+                            </ul>
                         </div>
                     </div>
                     <div class="exp__image">
@@ -454,13 +467,13 @@
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="70" y="70" width="70" height="70" rx="35" transform="rotate(-180 70 70)" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M41 47L29 35L41 23" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                             <a href="javascript:;" class="stock__arrow next">
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="70" height="70" rx="35" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M29 23L41 35L29 47" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -517,7 +530,7 @@
                                 {{$faq->question}}
                                 <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17 1L9 9L1 1" stroke="white" stroke-opacity="0.35" stroke-width="2"/>
-                                </svg>                                                                            
+                                </svg>
                             </a>
                             <div class="faq__main-body js-accordeons__item-body">
                                 {!!$faq->answer!!}
@@ -541,22 +554,22 @@
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="70" y="70" width="70" height="70" rx="35" transform="rotate(-180 70 70)" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M41 47L29 35L41 23" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                             <a href="javascript:;" class="review__arrow next">
                                 <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="70" height="70" rx="35" fill="#DC2128" fill-opacity="0.2"/>
                                     <path d="M29 23L41 35L29 47" stroke="#DC2128" stroke-width="2.5"/>
-                                </svg>                                    
+                                </svg>
                             </a>
                         </div>
-                    </div> 
+                    </div>
                     <div class="review__slider swiper">
                         <div class="swiper-wrapper">
                             @foreach ($revs as $rev)
                             <div class="review__item swiper-slide">
                                 <div class="review__item-header">
-                                    
+
                                     <div class="review__item-avatar">{{mb_substr($rev->name, 0, 1, "UTF-8")}}</div>
                                     <div class="review__item-col">
                                         <div class="review__item-name">{{$rev->name}}</div>

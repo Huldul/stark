@@ -193,12 +193,12 @@ select {
 .alert--content {
   position: relative;
   z-index: 12;
-  border-radius: 15px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: white;
-  padding: 30px;
+  padding: 50px;
   color: #333333;
   margin-bottom: 10%;
 }
@@ -940,14 +940,32 @@ select {
 }
 
 .hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, #000 9.54%, rgba(0, 0, 0, 0) 34.22%), url("../img/hero-1.jpg") center/cover no-repeat;
+}
+
+.hero .swiper-slide {
+    height: calc(100vh - 103px);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, #000 9.54%, rgba(0, 0, 0, 0) 34.22%), url("../img/hero-1.jpg") center/cover no-repeat;
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-image: url("../img/hero-1.jpg");*/
+}
+
+.hero__slider {
+    position: absolute;
+    width: 100vw;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 25;
 }
 
 .hero__container {
   height: calc(100vh - 103px);
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-bottom: 90px;
 }
 
@@ -1015,7 +1033,7 @@ select {
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 10%;
   top: 10%;
@@ -1398,7 +1416,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 20%;
@@ -1651,7 +1669,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 20%;
   top: 10%;
@@ -1790,7 +1808,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 10%;
@@ -1955,7 +1973,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 20%;
@@ -2136,7 +2154,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 50%;
   transform: translateX(-50%);
@@ -2261,7 +2279,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 10%;
@@ -2356,7 +2374,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   right: 0;
   top: 5%;
@@ -2443,7 +2461,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 50%;
   transform: translateX(-50%);
@@ -2498,7 +2516,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   position: absolute;
   content: "";
   border-radius: 50%;
-  
+
 background: url('../img/red-ellipse.png') center/contain no-repeat;
   left: 0;
   top: 10%;
