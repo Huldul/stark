@@ -27,7 +27,7 @@
             <div class="footer__top">
                 <div class="footer__col">
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="footer__logo">
-                        <img src="{{asset("img/logo.png")}}" alt="STARK">
+                        <img src="{{asset("img/logo-2.png")}}" alt="STARK">
                     </a>
                     <span>{{setting('.licence')}}</span>
                 </div>

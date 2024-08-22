@@ -56,7 +56,7 @@
     <div class="container">
         <div class="header__container">
             <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="header__logo">
-                <img src="{{asset("img/logo.png")}}" alt="Stark">
+                <img src="{{asset("img/logo-2.png")}}" alt="Stark">
             </a>
             <div class="header__lang">
                 <a href="javascript:;" class="header__lang-active">
