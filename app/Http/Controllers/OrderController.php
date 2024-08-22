@@ -103,6 +103,27 @@ class OrderController extends Controller
             \Log::error('Error sending email: ' . $e->getMessage());
             $message = 'Заявка успешно отправленна.';
         }
+
+        $response = Http::post('https://starkdetailing.bitrix24.kz/rest/4896/lkg7lqz3m08mabx8/crm.lead.add.json', [
+            'FIELDS' => [
+                'TITLE' => 'ЛИД официальный сайт Кнопка записаться',
+                'NAME' => $request->name,
+                'PHONE' => [
+                    [
+                        'VALUE' => $request->phone,
+                        'VALUE_TYPE' => 'MOBILE'
+                    ]
+                ],
+                // Добавьте другие поля, если требуется
+            ],
+            'CompanyLeadUfCrm1716622791' => $request->want,
+        ]);
+
+        if ($response->successful()) {
+            \Log::info('Lead успешно создан в Bitrix');
+        } else {
+            \Log::error('Ошибка при создании лида в Bitrix: ' . $response->body());
+        }
         return $pdf->download('report.pdf'); // Сохраняем или отображаем PDF
 
     }
@@ -129,6 +150,26 @@ class OrderController extends Controller
         $order->number = $request->number;
         $order->text = $request->text;
         $order->save();
+        $response = Http::post('https://starkdetailing.bitrix24.kz/rest/4896/lkg7lqz3m08mabx8/crm.lead.add.json', [
+            'FIELDS' => [
+                'TITLE' => 'ЛИД официальный сайт Заявка',
+                'NAME' => $request->name,
+                'PHONE' => [
+                    [
+                        'VALUE' => $request->number,
+                        'VALUE_TYPE' => 'MOBILE'
+                    ]
+                ],
+                'TEXT' => $request->text,
+                // Добавьте другие поля, если требуется
+            ],
+        ]);
+
+        if ($response->successful()) {
+            \Log::info('Lead успешно создан в Bitrix');
+        } else {
+            \Log::error('Ошибка при создании лида в Bitrix: ' . $response->body());
+        }
         return redirect()->back()->with('success', "Спасибо! Ваша заявка успешно отправлена");
     }
     public function send_responde(Request $request){
