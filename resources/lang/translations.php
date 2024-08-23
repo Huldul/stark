@@ -121,5 +121,21 @@ return [
         'en' => 'Site developed by',
         'kz' => 'Сайт жасаған',
     ],
-                                            
+    'experience' => [
+        'ru' => 'Опыт',
+        'en' => 'Experience',
+        'kz' => 'Тәжірибе',
+    ],
+    'meet_the_team' => [
+    'ru' => 'Познакомьтесь с командой профессионалов',
+    'en' => 'Meet the team of professionals',
+    'kz' => 'Кәсіпқойлар тобымен танысыңыз',
+],
+'we_value_clients' => [
+    'ru' => 'Мы ценим и уважаем каждого клиента, признавая уникальность каждого автомобиля и истории его владельца',
+    'en' => 'We value and respect every client, recognizing the uniqueness of each car and the story of its owner',
+    'kz' => 'Біз әрбір клиентті бағалаймыз және құрметтейміз, әрбір көлік пен оның иесінің тарихының бірегейлігін мойындаймыз',
+],
+
+
 ];
