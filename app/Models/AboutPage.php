@@ -9,5 +9,5 @@ class AboutPage extends Model
 {
     use HasFactory;
     use Translatable;
-    protected $translatable = ['mission', 'head_main', 's', 't', 'a', 'r', 'k', 'cars', 'rewievs', 'years', 'backs', 'max', 'first'];
+    protected $translatable = ['mission', 'head_main', 's', 't', 'a', 'r', 'k', 'cars', 'rewievs', 'years', 'backs', 'max', 'first', 'l1', 'l2', 'l3', 'l4', 'l5'];
 }
