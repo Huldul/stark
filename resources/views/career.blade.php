@@ -32,11 +32,11 @@
                                     <path d="M25 16.1109H16.1111H13.8889H5V13.8887H13.8889L16.1111 13.8889L25 13.8887V16.1109Z" fill="#DC2128"/>
                                 </svg>
                             </a>
-                            <a href="#" target="_blank" class="career__hh">
-                                <img src="/img/hh.png" alt="">
-                            </a>
                             <div class="career__main-body js-accordeons__item-body">
                                 <p>{!!$vac->main!!}</p>
+                                <a href="#" target="_blank" class="career__hh">
+                                    <img src="/img/hh.png" alt="">
+                                </a>
                                 <a href="javascript:;" class="js-response-btn" data-id="1">откликнуться</a>
                             </div>
                         </div>
