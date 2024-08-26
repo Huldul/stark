@@ -940,6 +940,7 @@ select {
 }
 
 .hero {
+  overflow: hidden;
 }
 
 .hero .swiper-slide {
