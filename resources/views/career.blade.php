@@ -35,7 +35,7 @@
                             <div class="career__main-body js-accordeons__item-body">
                                 <p>{!!$vac->main!!}</p>
                                 <a href="#" target="_blank" class="career__hh">
-                                    <img src="/img/hh.png" alt="">
+                                    <img src="{{asset("img/hh.png")}}" alt="">
                                 </a>
                                 <a href="javascript:;" class="js-response-btn" data-id="1">откликнуться</a>
                             </div>

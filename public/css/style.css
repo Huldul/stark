@@ -2359,6 +2359,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
 }
 
 .career__hh {
+  display: flex;
   width: 40px;
   height: 40px;
 }
