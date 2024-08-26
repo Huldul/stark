@@ -2358,10 +2358,13 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   border-color: #ffffff;
 }
 
-.career__hh {
+.career__main-body a.career__hh {
   display: flex;
   width: 40px;
   height: 40px;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 .career__hh img {
