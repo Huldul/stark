@@ -2365,6 +2365,7 @@ background: url('../img/red-ellipse.png') center/contain no-repeat;
   padding: 0;
   margin: 0;
   border: none;
+  margin-top: 15px;
 }
 
 .career__hh img {
