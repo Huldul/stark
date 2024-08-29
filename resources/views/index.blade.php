@@ -449,7 +449,7 @@
                         </div>
                     </div>
                     <div class="exp__image">
-                        <img src="img/exp-1.jpg" alt="">
+                        <img src="{{("storage/".$page->exp_image)}}" alt="">
                     </div>
                 </div>
             </div>
